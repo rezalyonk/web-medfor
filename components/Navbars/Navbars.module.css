@@ -6,3 +6,18 @@
     border: none;
     background-color: transparent;
 }
+
+#iconSearch{
+    background-color: transparent;
+    width: 24px;
+    height: 24px;
+}
+
+#divSearch{
+    background-color: transparent;
+}
+
+#navItemsearch{
+    background-color: white;
+    border-radius: 10px;
+}

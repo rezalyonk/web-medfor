@@ -4,6 +4,7 @@ import Image from "next/image";
 import styles from '@/components/Navbars/Navbars.module.css'
 import iconeHamburgermenu from '@/assets/images/icon-hamburger-menu.png';
 import logoMedfor from '@/assets/images/logo-medfor-normal-reguler.png';
+import iconeSearch from '@/assets/images/icon-search.png';
 
 export default function Navbars() {
   return (
@@ -67,9 +68,34 @@ export default function Navbars() {
                 className={styles.logoMedfor}
               />
             </a>
+
+            <div id={styles.divSearch}>
+              <ul className="navbar-nav" style={{ marginRight: "2rem" }}>
+                <li className="nav-item border border-2 rounded" id={styles.navItemsearch}>
+                  <div className="input-group">
+                    <input
+                      type="text"
+                      className="form-control"
+                      name="#"
+                      placeholder="Cari di Media Formasi..."
+                      id="#"
+                    />
+                    <button type="button" className="btn ">
+                      <Image src={iconeSearch} alt="icon-search" id={styles.iconSearch} />
+                    </button>
+                  </div>
+                </li>
+              </ul>
+            </div>
           </div>
         </nav>
       </div>
+
+
+
+
+
+
 
 
 
