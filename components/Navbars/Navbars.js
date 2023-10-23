@@ -1,8 +1,8 @@
-// import styles from "../Navbars/index.css";
-// import styles1 from "../Navbars/index.module.css";
 import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
+import iconeHamburgermenu from '@/assets/images/icon-hamburger-menu.png';
+import logoMedfor from '@/assets/images/logo-medfor-normal-reguler.png';
 
 export default function Navbars() {
   return (
@@ -25,51 +25,52 @@ export default function Navbars() {
               <button
                 type="button"
                 data-bs-toggle="offcanvas"
-                data-bs-target="#offcanvasScrolling"
-                aria-controls="offcanvasScrolling"
+                data-bs-target="#offcanvasWithBothOptions"
+                aria-controls="offcanvasWithBothOptions"
               >
                 <Image
-                  src="/assets/images/Picture1.png"
-                  alt="Menu"
-                  width={30}
+                  src={iconeHamburgermenu}
+                  alt="icon-hamburger-menu"
                   height={30}
+                  width={30}
                 />
               </button>
-              {/* <Image
-                src="/assets/images/01 Logo Media Formasi Normal Reguler.png"
-                alt="Logo"
-                className="d-inline-block align-text-top"
-              /> */}
+              <div
+                className="offcanvas offcanvas-start"
+                data-bs-scroll="true"
+                tabIndex={-1}
+                id="offcanvasWithBothOptions"
+                aria-labelledby="offcanvasWithBothOptionsLabel"
+              >
+                <div className="offcanvas-header">
+                  <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
+                    Backdrop with scrolling
+                  </h5>
+                  <button
+                    type="button"
+                    className="btn-close"
+                    data-bs-dismiss="offcanvas"
+                    aria-label="Close"
+                  />
+                </div>
+                <div className="offcanvas-body">
+                  <p>
+                    Try scrolling the rest of the page to see this option in action.
+                  </p>
+                </div>
+              </div>
+              <Image
+                src={logoMedfor}
+                alt="logo-medfor"
+                height={30}
+                id="logo-medfor"
+              />
             </a>
-            <div
-              className="offcanvas offcanvas-start"
-              data-bs-scroll="true"
-              data-bs-backdrop="false"
-              tabIndex={-1}
-              id="offcanvasScrolling"
-              aria-labelledby="offcanvasScrollingLabel"
-            >
-              <div className="offcanvas-header">
-                <h5 className="offcanvas-title" id="offcanvasScrollingLabel">
-                  Offcanvas with body scrolling
-                </h5>
-                <button
-                  type="button"
-                  className="btn-close"
-                  data-bs-dismiss="offcanvas"
-                  aria-label="Close"
-                />
-              </div>
-              <div className="offcanvas-body">
-                <p>
-                  Try scrolling the rest of the page to see this option in
-                  action.
-                </p>
-              </div>
-            </div>
           </div>
         </nav>
       </div>
+
+
 
       {/* Ini adalah batas script jangan diubah */}
       <Script
