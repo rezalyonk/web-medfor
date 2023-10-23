@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Script from "next/script";
 import Image from "next/image";
+import styles from '@/components/Navbars/Navbars.module.css'
 import iconeHamburgermenu from '@/assets/images/icon-hamburger-menu.png';
 import logoMedfor from '@/assets/images/logo-medfor-normal-reguler.png';
 
@@ -23,7 +24,7 @@ export default function Navbars() {
           <div className="container-fluid">
             <a className="navbar-brand" href="#">
               <button
-                type="button"
+                type="button" className={styles.btniconHamburger}
                 data-bs-toggle="offcanvas"
                 data-bs-target="#offcanvasWithBothOptions"
                 aria-controls="offcanvasWithBothOptions"
@@ -31,8 +32,8 @@ export default function Navbars() {
                 <Image
                   src={iconeHamburgermenu}
                   alt="icon-hamburger-menu"
-                  height={30}
-                  width={30}
+                  height={24}
+                  width={24}
                 />
               </button>
               <div
@@ -62,8 +63,8 @@ export default function Navbars() {
               <Image
                 src={logoMedfor}
                 alt="logo-medfor"
-                height={30}
-                id="logo-medfor"
+                height={28}
+                className={styles.logoMedfor}
               />
             </a>
           </div>
