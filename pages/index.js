@@ -3,6 +3,7 @@ import Head from "next/head";
 // import { Inter } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
 import Navbars from "@/components/Navbars/Navbars";
+import Carousels from "@/components/Carousels/Carousels";
 
 export default function Home() {
   return (
@@ -11,6 +12,8 @@ export default function Home() {
         <title> Media Formasi </title>
       </Head>
       <Navbars />
+      <Carousels />
+
     </>
   );
 }
