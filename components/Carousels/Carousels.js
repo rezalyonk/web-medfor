@@ -1,11 +1,37 @@
 import styles from "@/components/Carousels/Carousels.module.css";
 import Head from "next/head";
 import Script from "next/script";
+import { getPosts } from '@/pages/api/ghostConfig';
+import Image from "next/image";
+import React, { useState, useEffect } from 'react';
 
+// export async function getStaticProps() {
+//     const res = await getPosts;
+//     const posts = await res.json()
 
-
+//     return {
+//         props: { posts }
+//     }
+// }
 
 export default function Carousel() {
+    const [posts, setPosts] = useState([]);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        async function fetchData() {
+            try {
+                const data = await getPosts();
+                setPosts(data);
+                setLoading(false);
+            } catch (error) {
+                console.error('Error fetching data:', error);
+            }
+        }
+
+        fetchData();
+    }, []);
+
     return (
         <div>
             <Head>
@@ -21,71 +47,54 @@ export default function Carousel() {
             </Head>
             <div>
                 <br />
-                <div id="carouselExampleCaptions" className="carousel slide">
-                    <div className="carousel-indicators">
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to={0}
-                            className="active"
-                            aria-current="true"
-                            aria-label="Slide 1"
-                        />
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to={1}
-                            aria-label="Slide 2"
-                        />
-                        <button
-                            type="button"
-                            data-bs-target="#carouselExampleCaptions"
-                            data-bs-slide-to={2}
-                            aria-label="Slide 3"
-                        />
-                    </div>
-                    <div className="carousel-inner">
-                        <div className="carousel-item active">
-                            <img src="..." className="d-block w-100" alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>First slide label</h5>
-                                <p>Some representative placeholder content for the first slide.</p>
+                <br />
+                <br />
+                <br />
+                <h1>Ini jadi Carousels</h1>
+                <br />
+                <br />
+                <br />
+                <br />
+                <hr />
+                <br />
+                <br />
+                <br />
+                <br />
+
+                <div>
+                    {posts && posts.map((post) => (
+                        <div className="card" style={{ width: "18rem" }}>
+                            <img src={post?.feature_image} className="card-img-top" alt="..." />
+                            <div className="card-body">
+                                <h5 className="card-title">{post?.title}</h5>
+                                <p className="card-text">
+                                    {post?.excerpt}
+                                </p>
+                                <a href={post?.url} className="btn btn-primary">
+                                    Baca Sekarang
+                                </a>
                             </div>
                         </div>
-                        <div className="carousel-item">
-                            <img src="..." className="d-block w-100" alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>Second slide label</h5>
-                                <p>Some representative placeholder content for the second slide.</p>
-                            </div>
-                        </div>
-                        <div className="carousel-item">
-                            <img src="..." className="d-block w-100" alt="..." />
-                            <div className="carousel-caption d-none d-md-block">
-                                <h5>Third slide label</h5>
-                                <p>Some representative placeholder content for the third slide.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <button
-                        className="carousel-control-prev"
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="prev"
-                    >
-                        <span className="carousel-control-prev-icon" aria-hidden="true" />
-                        <span className="visually-hidden">Previous</span>
-                    </button>
-                    <button
-                        className="carousel-control-next"
-                        type="button"
-                        data-bs-target="#carouselExampleCaptions"
-                        data-bs-slide="next"
-                    >
-                        <span className="carousel-control-next-icon" aria-hidden="true" />
-                        <span className="visually-hidden">Next</span>
-                    </button>
+
+                    ))}
                 </div>
+
+
+
+
+
+
+
+                <hr />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+                <br />
+
 
             </div>
             {/* Ini adalah batas script jangan diubah */}
