@@ -63,7 +63,7 @@ export default function Carousel() {
 
                 <div>
                     {posts && posts.map((post) => (
-                        <div className="card" style={{ width: "18rem" }}>
+                        <div key={post.id} className="card" style={{ width: "18rem" }}>
                             <Image src={post?.feature_image} className="card-img-top" alt={post?.feature_image_alt} height={200} width={200} />
                             <div className="card-body">
                                 <h5 className="card-title">{post?.title}</h5>
