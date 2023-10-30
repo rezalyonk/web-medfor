@@ -1,0 +1,37 @@
+.containers{
+    margin-top: 42px;
+    margin-bottom: 42px;
+}
+
+.containers2{
+    margin-bottom: 42px;
+}
+
+.ul1{
+    list-style: none;
+}
+
+.ul2{
+    list-style: none;
+}
+
+.divnewslatter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.h6judul{
+    margin-left: 28pt;
+    font-weight: bold;
+}
+
+.h5image{
+    margin-right: 10px;
+}
+
+.h6medFortrade{
+    margin-left: 16rem;
+    font-weight: bold;
+}
