@@ -27,25 +27,20 @@ export default function Cards() {
             <div className="container-fluid">
                 <div className="container">
                     <div className="row">
-                        <div className="col-4">
-                            {posts && posts.map((post) => (
-                                <div key={post.id} className="card-group">
-                                    <div className="card" style={{ width: "18rem" }}>
-                                        <Image src={post?.feature_image} className="card-img-top img-thumbnail" height="1920" width="1920" />
-                                        <div className="card-body">
-                                            <h5 className="card-title">{post?.title}</h5>
-                                            <p className="card-text">
-                                                {post?.custom_excerpt}
-                                            </p>
-                                            <a href={post?.url} className="btn btn-dark">
-                                                Baca Sekarang
-                                            </a>
-                                        </div>
+                        {posts && posts.map((post) => (
+                            <div key={post.id} className="card-group col-3 g-4">
+                                <div className="card" style={{ width: "18rem" }}>
+                                    <Image src={post?.feature_image} height="1920" width="1920"
+                                        className="card-img-top img-fluid img-thumbnail rounded-4 object-fit-fill border rounded ratio ratio-16x9" sizes="100vw" />
+                                    <div className="card-body">
+                                        <h5 className="card-title">{post?.title}</h5>
+                                        <a href={post?.url} className="btn btn-dark float-end">
+                                            Baca Sekarang
+                                        </a>
                                     </div>
                                 </div>
-                            ))}
-                        </div>
-                        <div className="col-4"></div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
