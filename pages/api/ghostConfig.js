@@ -10,7 +10,7 @@ export async function getPosts() {
     return await api.posts
         .browse({
             include: ['tags', 'authors'],
-            limit: 12
+            limit: 7
         }).catch(err => {
             throw new Error(err);
         })
