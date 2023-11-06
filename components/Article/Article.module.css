@@ -1,0 +1,29 @@
+.articleContainers{
+    /* background-color: skyblue; */
+    border: solid;
+    border-radius: 1.5%;
+}
+
+.imageiconArticlenews{
+    /* background-color: green; */
+    width: 6vh;
+    height: auto;
+    margin-left: 1.5rem;
+    margin-right: 8pt;
+    margin-bottom: 2pt;
+}
+
+.Artikelh1{
+    /* background-color: red; */
+    font-weight: bold;
+    font-size: 20pt;
+    margin-top: 16pt;
+
+}
+
+.Artikelh2{
+    /* background-color: green; */
+    font-weight: bold;
+    font-size: 20pt;
+    margin-left: 54%;
+}
