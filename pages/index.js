@@ -4,8 +4,8 @@ import Head from "next/head";
 // import styles from "@/styles/Home.module.css";
 import Navbars from "@/components/Navbars/Navbars";
 import Carousels from "@/components/Carousels/Carousels";
-import Cards from "@/components/Cards/Cards";
 import Footers from "@/components/Footers/Footers";
+import Article from "@/components/Article/Article";
 
 export default function Home() {
   return (
@@ -15,7 +15,7 @@ export default function Home() {
       </Head>
       <Navbars />
       <Carousels />
-      <Cards />
+      <Article />
       <Footers />
     </>
   );
