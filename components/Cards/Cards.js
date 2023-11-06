@@ -26,17 +26,16 @@ export default function Cards() {
             {/* Container */}
             <div className="container-fluid">
                 <div className="container">
-                    <div className="row">
+                    <div className={`${styles.iniRows} row`}>
                         {posts && posts.map((post) => (
-                            <div key={post.id} className="card-group col-3 g-4">
+                            <div key={post.id} className={`${styles.cardGrups} card-group col-4 g-3`}>
                                 <div className="card" style={{ width: "18rem" }}>
                                     <Image src={post?.feature_image} height="1920" width="1920"
-                                        className="card-img-top img-fluid img-thumbnail rounded-4 object-fit-fill border rounded ratio ratio-16x9" sizes="100vw" />
+                                        className={`${styles.imageThumnail} card-img-top img-fluid img-thumbnail rounded-3`}
+                                    />
                                     <div className="card-body">
                                         <h5 className="card-title">{post?.title}</h5>
-                                        <a href={post?.url} className="btn btn-dark float-end">
-                                            Baca Sekarang
-                                        </a>
+                                        <button className={`${styles.button} btn btn-dark float-end`}>Baca Sekarang</button>
                                     </div>
                                 </div>
                             </div>
