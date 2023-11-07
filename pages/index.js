@@ -5,7 +5,8 @@ import Head from "next/head";
 import Navbars from "@/components/Navbars/Navbars";
 import Carousels from "@/components/Carousels/Carousels";
 import Footers from "@/components/Footers/Footers";
-import Article from "@/components/Article/Article";
+import ArtikelTerbaru from "@/components/ArtikelTerbaru/indexArtikelTerbaru";
+import PopKultur from "@/components/PopKultur/indexPopKultur";
 
 export default function Home() {
   return (
@@ -15,7 +16,8 @@ export default function Home() {
       </Head>
       <Navbars />
       <Carousels />
-      <Article />
+      <ArtikelTerbaru />
+      <PopKultur />
       <Footers />
     </>
   );
