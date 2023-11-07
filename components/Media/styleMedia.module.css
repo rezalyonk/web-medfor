@@ -1,0 +1,30 @@
+.containerDisplay{
+    /* background-color: skyblue; */
+    border: solid;
+    border-radius: 16px;
+    margin-top: 2%;
+}
+
+.imageiconMedia{
+    /* background-color: green; */
+    width: 5.5vh;
+    height: auto;
+    margin-left: 1.5rem;
+    margin-right: 8pt;
+    margin-bottom: 2pt;
+}
+
+.iniH1{
+    /* background-color: red; */
+    font-weight: bold;
+    font-size: 20pt;
+    margin-top: 12pt;
+}
+
+.iniH1copy{
+    /* background-color: green; */
+    font-weight: bold;
+    font-size: 20pt;
+    /* margin-left: 480pt; */
+    margin-left: 64%;
+}
