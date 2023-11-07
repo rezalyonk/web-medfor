@@ -2,7 +2,7 @@
     /* background-color: skyblue; */
     border: solid;
     border-radius: 16px;
-    margin-top: 4%;
+    margin-top: 2%;
 }
 
 .imageiconPopkulturNews{
@@ -15,14 +15,14 @@
 }
 
 .iniH1{
-    background-color: red;
+    /* background-color: red; */
     font-weight: bold;
     font-size: 20pt;
     margin-top: 12pt;
 }
 
 .iniH1copy{
-    background-color: green;
+    /* background-color: green; */
     font-weight: bold;
     font-size: 20pt;
     /* margin-left: 480pt; */

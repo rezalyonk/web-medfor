@@ -5,17 +5,21 @@ import { fetchDataAllPost } from '@/pages/api/ghostConfig';
 
 export default function CardPopKultur() {
     const [posts, setPosts] = useState([]);
-    const [tags, setTags] = useState([]);
+    // const [tags, setTags] = useState([]);
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const data = await fetchDataAllPost();
-
                 // coba kita console log dulu
-                // console.log(data);               
+                // console.log(data);
 
-                setPosts(data.posts);
+                // Saring post berdasarkan primary_tag "Pop Kultur"
+                const filteredPosts = data.posts.filter(post => (
+                    post.primary_tag && post.primary_tag.name === "Pop Kultur"
+                ));
+
+                setPosts(filteredPosts);
             } catch (error) {
                 console.error('Error fetching data:', error);
             }

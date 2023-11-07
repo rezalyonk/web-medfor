@@ -14,7 +14,7 @@ export default function indexPopKultur() {
             <h1 className={`${styles.iniH1copy} d-inline-block`}>
                 Tampilkan Semua
             </h1>
-            {/* <CardPopKultur /> */}
+            <CardPopKultur />
         </div>
     )
 }
