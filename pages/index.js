@@ -7,6 +7,10 @@ import Carousels from "@/components/Carousels/Carousels";
 import Footers from "@/components/Footers/Footers";
 import ArtikelTerbaru from "@/components/ArtikelTerbaru/indexArtikelTerbaru";
 import PopKultur from "@/components/PopKultur/indexPopKultur";
+import Teknologi from "@/components/Teknologi/indexTeknologi";
+import Gaming from "@/components/Gaming/indexGaming";
+import Otomotif from "@/components/Otomotif/indexOtomotif";
+import Media from "@/components/Media/indexMedia";
 
 export default function Home() {
   return (
@@ -18,6 +22,10 @@ export default function Home() {
       <Carousels />
       <ArtikelTerbaru />
       <PopKultur />
+      <Teknologi />
+      <Gaming />
+      <Otomotif />
+      <Media />
       <Footers />
     </>
   );
