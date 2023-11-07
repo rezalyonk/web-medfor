@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react'
 import styles from "./Carousels.module.css"
-import { getTags } from '@/pages/api/ghostTagsapi'
 import Image from 'next/image'
 import { getPosts } from '@/pages/api/ghostConfig';
 import iconKirimedfor from "@/assets/images/icon-kiri.png"
@@ -9,16 +8,13 @@ import iconKananmedfor from "@/assets/images/icon-kanan.png"
 
 export default function Carousels() {
     const [posts, setPosts] = useState([]);
-    const [tags, setTags] = useState([]);
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         async function fetchData() {
             try {
                 const data = await getPosts();
-                const data2 = await getTags();
                 setPosts(data);
-                setTags(data2);
                 setLoading(false);
             } catch (error) {
                 console.error('Error fetching data: ', error);
