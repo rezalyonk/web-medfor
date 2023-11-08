@@ -2,7 +2,7 @@ import Head from "next/head";
 // import Image from "next/image";
 // import { Inter } from "next/font/google";
 // import styles from "@/styles/Home.module.css";
-import Navbars from "@/components/Navbars/Navbars";
+import Navbar from "@/components/Navbars/indexNavbar";
 import Carousels from "@/components/Carousels/Carousels";
 import Footers from "@/components/Footers/Footers";
 import ArtikelTerbaru from "@/components/ArtikelTerbaru/indexArtikelTerbaru";
@@ -18,7 +18,7 @@ export default function Home() {
       <Head>
         <title> Media Formasi </title>
       </Head>
-      <Navbars />
+      <Navbar />
       <Carousels />
       <ArtikelTerbaru />
       <PopKultur />
