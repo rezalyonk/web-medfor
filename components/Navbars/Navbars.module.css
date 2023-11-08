@@ -1,23 +1,9 @@
-.logoMedfor{
-    margin-left: 12pt;
+.containerDisplay{
+    /* background-color: skyblue; */
 }
 
-.btniconHamburger{
-    border: none;
-    background-color: transparent;
-}
-
-#iconSearch{
-    background-color: transparent;
-    width: 24px;
-    height: 24px;
-}
-
-#divSearch{
-    background-color: transparent;
-}
-
-#navItemsearch{
-    background-color: white;
-    border-radius: 10px;
+.imageLogoMedfor{
+    height: auto;
+    width: 32vh;
+    margin-left: -44px;
 }
