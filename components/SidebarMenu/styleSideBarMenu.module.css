@@ -1,0 +1,48 @@
+.containerDisplay{
+    /* background-color: yellow; */
+}
+
+.imageIconHamburgerMenu{
+    height: auto;
+    width: 4vh;
+}
+
+.imageLogoMedfor{
+    height: auto;
+    width: 28vh;
+}
+
+.imageiconclose{
+    background-color: transparent;
+    height: auto;
+    width: 4vh;
+}
+
+.canvasBody{
+    /* background-color: aquamarine; */
+    list-style: none;
+}
+.bagiaLi{
+    /* background-color: aqua; */
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.imageLi{
+    height: auto;
+    width: 6vh;
+    margin-right: 10px;
+}
+
+.imageLi1{
+    /* logo kreatiformasi */
+    height: auto;
+    width: 4vh;
+    margin-right: 10px;
+}
+.imageLi2{
+    /* logo Virtunix */
+    height: auto;
+    width: 6vh;
+    margin-right: 10px;
+}
