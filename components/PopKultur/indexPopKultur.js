@@ -8,7 +8,7 @@ export default function indexPopKultur() {
     return (
         <div className={`${styles.containerDisplay} container`}>
             <h1 className={`${styles.iniH1} d-inline-block`}>
-                <Image src={iconPopkulturNews} width={100} height={100} className={`${styles.imageiconPopkulturNews}`} />
+                <Image src={iconPopkulturNews} width={100} height={100} className={`${styles.imageiconPopkulturNews}`} alt="..." />
                 Pop Kultur
             </h1>
             <h1 className={`${styles.iniH1copy} d-inline-block`}>

@@ -8,7 +8,7 @@ export default function indexOtomotif() {
     return (
         <div className={`${styles.containerDisplay} container`}>
             <h1 className={`${styles.iniH1} d-inline-block`}>
-                <Image src={iconOtomotif} width={100} height={100} className={`${styles.imageiconOtomotif}`} />
+                <Image src={iconOtomotif} width={100} height={100} className={`${styles.imageiconOtomotif}`} alt="..." />
                 Otomotif
             </h1>
             <h1 className={`${styles.iniH1copy} d-inline-block`}>

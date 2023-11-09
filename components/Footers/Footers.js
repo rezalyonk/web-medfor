@@ -49,13 +49,13 @@ export default function Footers() {
                 <div className={`${styles.containers2} row`}>
                     <div className="col">
                         <h6 className={`${styles.h6judul}`}>
-                            <Image src={iconmedfor} width={50} height={50} className={`${styles.h5image}`} />
+                            <Image src={iconmedfor} width={50} height={50} className={`${styles.h5image}`} alt={`iconmedfor`} />
                             PT TRIKARYA FORMASI BASODARA
                         </h6>
                     </div>
                     <div className="col">
                         <h6 className={`${styles.h6medFortrade} text-uppercase`}>
-                            <Image src={iconmedfor} width={50} height={50} className={`${styles.h5image}`} />
+                            <Image src={iconmedfor} width={50} height={50} className={`${styles.h5image}`} alt={`iconmedfor`} />
                             media formasi &trade;
                         </h6>
                     </div>

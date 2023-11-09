@@ -35,7 +35,7 @@ export default function Carousels() {
                                 {posts && posts.map((post) => (
                                     <div key={post.id}>
                                         <div className="carousel-item active" >
-                                            <Image src={post?.feature_image} height={480} width={640} className={`${styles.iniImage} d-block w-100`} />
+                                            <Image src={post?.feature_image} height={480} width={640} className={`${styles.iniImage} d-block w-100`} alt={`gambar`} />
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{post?.title}</h5>
                                             </div>
@@ -45,13 +45,13 @@ export default function Carousels() {
                             </div>
                             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="prev">
                                 <span >
-                                    <Image src={iconKirimedfor} className={`${styles.iconKirimedfor}`} aria-hidden="true" />
+                                    <Image src={iconKirimedfor} className={`${styles.iconKirimedfor}`} aria-hidden="true" alt={`iconKirimedfor`} />
                                 </span>
                                 <span className="visually-hidden">Previous</span>
                             </button>
                             <button className="carousel-control-next" type="button" data-bs-target="#carouselExampleAutoplaying" data-bs-slide="next">
                                 <span>
-                                    <Image src={iconKananmedfor} className={`${styles.iconKananmedfor}`} aria-hidden="true" />
+                                    <Image src={iconKananmedfor} className={`${styles.iconKananmedfor}`} aria-hidden="true" alt={`iconKananmedfor`} />
                                 </span>
                                 <span className="visually-hidden">Next</span>
                             </button>

@@ -8,7 +8,7 @@ export default function indexGaming() {
     return (
         <div className={`${styles.containerDisplay} container`}>
             <h1 className={`${styles.iniH1} d-inline-block`}>
-                <Image src={iconGaming} width={100} height={100} className={`${styles.imageiconGaming}`} />
+                <Image src={iconGaming} width={100} height={100} className={`${styles.imageiconGaming}`} alt={`iconGaming`} />
                 Gaming
             </h1>
             <h1 className={`${styles.iniH1copy} d-inline-block`}>

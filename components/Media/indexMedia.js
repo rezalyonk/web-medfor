@@ -8,7 +8,7 @@ export default function indexMedia() {
     return (
         <div className={`${styles.containerDisplay} container`}>
             <h1 className={`${styles.iniH1} d-inline-block`}>
-                <Image src={iconMedia} width={100} height={100} className={`${styles.imageiconMedia}`} />
+                <Image src={iconMedia} width={100} height={100} className={`${styles.imageiconMedia}`} alt="..." />
                 Media
             </h1>
             <h1 className={`${styles.iniH1copy} d-inline-block`}>

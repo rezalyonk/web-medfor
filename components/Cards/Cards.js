@@ -31,8 +31,7 @@ export default function Cards() {
                             <div key={post.id} className={`${styles.cardGrups} card-group col-4 g-3`}>
                                 <div className="card" style={{ width: "18rem" }}>
                                     <Image src={post?.feature_image} height="1920" width="1920"
-                                        className={`${styles.imageThumnail} card-img-top img-fluid img-thumbnail rounded-3`}
-                                    />
+                                        className={`${styles.imageThumnail} card-img-top img-fluid img-thumbnail rounded-3`} alt={`gambar`} />
                                     <div className="card-body">
                                         <h5 className="card-title">{post?.title}</h5>
                                         <button className={`${styles.button} btn btn-dark float-end`}>Baca Sekarang</button>

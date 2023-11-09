@@ -14,7 +14,7 @@ export default function Navbars() {
         </div>
         <div className="col">
           <a className="navbar-brand" href="#">
-            <Image src={logoMedfor} width={1920} height={1920} className={`${styles.imageLogoMedfor}`} />
+            <Image src={logoMedfor} width={1920} height={1920} className={`${styles.imageLogoMedfor}`} alt="..." />
           </a>
         </div>
       </nav>
