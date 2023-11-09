@@ -35,7 +35,7 @@ export default function Carousels() {
                                 {posts && posts.map((post) => (
                                     <div key={post.id}>
                                         <div className="carousel-item active" >
-                                            <Image src={post?.feature_image} height={480} width={640} className="d-block w-100" />
+                                            <Image src={post?.feature_image} height={480} width={640} className={`${styles.iniImage} d-block w-100`} />
                                             <div class="carousel-caption d-none d-md-block">
                                                 <h5>{post?.title}</h5>
                                             </div>
