@@ -33,11 +33,15 @@ export async function fetchGhostDefault() {
             throw new Error('Request gagal loh, coba cek lagi');
         }
         const data = await response.json();
-        // console.log('Data dari API:', data); // Menampilkan data dari API
+
+        // Menampilkan data dari API
+        // console.log('Data dari API:', data); 
         return data;
     } catch (error) {
-        // console.error('Kesalahan:', error); // Menampilkan kesalahan jika ada
-        setError(error);
+        // Menampilkan kesalahan jika ada
+        console.error('Kesalahan:', error);
+
+        // setError(error);
     }
 }
 
@@ -48,10 +52,14 @@ export async function fetchDataAllPost() {
             throw new Error('Request gagal loh, coba cek lagi');
         }
         const data = await response.json();
-        // console.log('Data dari API:', data); // Menampilkan data dari API
+
+        // Menampilkan data dari API
+        // console.log('Data dari API:', data); 
         return data;
     } catch (error) {
-        console.error('Kesalahan:', error); // Menampilkan kesalahan jika ada
-        setError(error);
+        // Menampilkan kesalahan jika ada
+        console.error('Kesalahan:', error);
+
+        // setError(error);
     }
 }
