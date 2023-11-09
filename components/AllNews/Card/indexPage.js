@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from './indexPage.module.css'
 import { fetchDataAllPost } from '@/pages/api/ghostConfig'
 
-export default function indexPage() {
+export default function IndexPage() {
     const [posts, setPosts] = useState([]);
 
     useEffect(() => {
