@@ -5,3 +5,8 @@
 .cardGrups{
     /* background-color: blue; */
 }
+
+.imageThumnail{
+    aspect-ratio: 16/9;
+	object-fit: cover;
+}

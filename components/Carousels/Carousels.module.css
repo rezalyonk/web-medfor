@@ -12,3 +12,8 @@
     width: 20px;
     height: auto;
 }
+
+.iniImage{
+    aspect-ratio: 16/9;
+	object-fit: cover;
+}
