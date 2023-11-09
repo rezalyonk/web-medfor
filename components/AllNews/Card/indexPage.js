@@ -30,7 +30,7 @@ export default function indexPage() {
                     {posts && posts.map((post) => (
                         <div key={post.id} className={`${styles.cardGroup} card-group col-4 gx-2 gy-3`}>
                             <div className={`${styles.cardAja} card w-50`} style={{ width: "18rem" }}>
-                                <Image src={post?.feature_image} width={1920} height={1920} className={`${styles.imageThumbnail} card-img-top img-fluid`} alt={`Ini Adalah Gambar: ${post?.feature_image_alt} `} />
+                                <Image src={post?.feature_image} width={1920} height={1920} className={`${styles.imageThumbnail} card-img-top img-fluid`} alt="..." />
                                 <div className="card-body">
                                     <h5 className="card-title">{post.title}</h5>
                                     <p className="card-text">
