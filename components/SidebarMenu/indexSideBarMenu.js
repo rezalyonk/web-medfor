@@ -16,7 +16,7 @@ import iconclose from "@/assets/images/icon-close.png"
 export default function indexSideBarMenu() {
     return (
         <div className={`${styles.containerDisplay} container`}>
-            <button type="button" class={`${styles.iniButton} btn`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+            <button type="button" className={`${styles.iniButton} btn`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
                 <Image src={iconHamburgerMenu} width={100} height={100} className={`${styles.imageIconHamburgerMenu}`} />
             </button>
 
