@@ -15,71 +15,66 @@ import iconclose from "@/assets/images/icon-close.png"
 
 export default function indexSideBarMenu() {
     return (
-        <div className={`${styles.containerDisplay} container`}>
-            <button type="button" className={`${styles.iniButton} btn`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
-                <Image src={iconHamburgerMenu} width={100} height={100} className={`${styles.imageIconHamburgerMenu}`} alt="..." />
-            </button>
+        <>
+            <div className={`${styles.containerDisplay} container`}>
+                <button type="button" className={`${styles.iniButton} btn`} data-bs-toggle="offcanvas" data-bs-target="#offcanvasScrolling" aria-controls="offcanvasScrolling">
+                    <Image src={iconHamburgerMenu} width={100} height={100} className={`${styles.imageIconHamburgerMenu}`} alt="..." />
+                </button>
 
 
-            <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
-                <div className="offcanvas-header">
-                    <h5 className="offcanvas-title" id="offcanvasScrollingLabel"></h5>
-                    <Image src={logoMedfor} width={1920} height={1920} className={`${styles.imageLogoMedfor}`} alt="..." />
-                    <button type="button" className="btn" data-bs-dismiss="offcanvas" aria-label="Close">
-                        <Image src={iconclose} width={1920} height={1920} className={`${styles.imageiconclose}`} alt="..." />
-                    </button>
-                </div>
-                <div className={`${styles.canvasBody} offcanvas-body`}>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconPopkulturNews} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
-                        Pop Kultur
-                    </li>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconTeknologi} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
-                        Teknologi
-                    </li>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconGaming} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
-                        Gaming
-                    </li>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconOtomotif} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
-                        Otomotif
-                    </li>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconMedia} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
-                        Media
-                    </li>
-                    <hr />
-                    <hr />
-                    <div className={`${styles.bagian1} container-fluid text-center`}>
-                        <p>Tentang Kami</p>
-                        <p>Pedoman Media Siber</p>
-                        <p>Kode Etik Jurnalistik</p>
-                        <hr />
-                        <hr />
-                        <p>Project Kami</p>
+                <div className="offcanvas offcanvas-start" data-bs-scroll="true" data-bs-backdrop="false" tabIndex={-1} id="offcanvasScrolling" aria-labelledby="offcanvasScrollingLabel">
+                    <div className="offcanvas-header">
+                        <h5 className="offcanvas-title" id="offcanvasScrollingLabel"></h5>
+                        <Image src={logoMedfor} width={1920} height={1920} className={`${styles.imageLogoMedfor}`} alt="..." />
+                        <button type="button" className="btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                            <Image src={iconclose} width={1920} height={1920} className={`${styles.imageiconclose}`} alt="..." />
+                        </button>
                     </div>
+                    <div className={`${styles.canvasBody} offcanvas-body`}>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconPopkulturNews} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
+                            Pop Kultur
+                        </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconTeknologi} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
+                            Teknologi
+                        </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconGaming} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
+                            Gaming
+                        </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconOtomotif} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
+                            Otomotif
+                        </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconMedia} width={100} height={100} className={`${styles.imageLi}`} alt="..." />
+                            Media
+                        </li>
+                        <hr />
+                        <hr />
+                        <div className={`${styles.bagian1} container-fluid text-center`}>
+                            <p>Tentang Kami</p>
+                            <p>Pedoman Media Siber</p>
+                            <p>Kode Etik Jurnalistik</p>
+                            <hr />
+                            <hr />
+                            <p>Project Kami</p>
+                        </div>
 
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconKreatiformasi} width={100} height={100} className={`${styles.imageLi1}`} alt="..." />
-                        Kreatiformasi
-                    </li>
-                    <li className={`${styles.bagiaLi}`}>
-                        <Image src={iconvirtunix} width={100} height={100} className={`${styles.imageLi2}`} alt="..." />
-                        Virtunix
-                    </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconKreatiformasi} width={100} height={100} className={`${styles.imageLi1}`} alt="..." />
+                            Kreatiformasi
+                        </li>
+                        <li className={`${styles.bagiaLi}`}>
+                            <Image src={iconvirtunix} width={100} height={100} className={`${styles.imageLi2}`} alt="..." />
+                            Virtunix
+                        </li>
+                    </div>
                 </div>
+                {/* ini bagian Script */}
+                <Script src="./script.js" />
             </div>
-
-
-
-
-
-
-
-            {/* ini bagian Script */}
-            <Script src="./script.js" />
-        </div>
+        </>
     )
 }
