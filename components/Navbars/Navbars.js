@@ -1,8 +1,8 @@
-import React from 'react'
-import Image from 'next/image'
-import styles from './Navbars.module.css'
-import logoMedfor from '@/assets/images/logo-medfor-normal-reguler.png'
-import SideBarMenu from '../SidebarMenu/indexSideBarMenu'
+import React from "react";
+import Image from "next/image";
+import styles from "./Navbars.module.css";
+import logoMedfor from "@/assets/images/logo-medfor-normal-reguler.png";
+import SideBarMenu from "../SidebarMenu/indexSideBarMenu";
 
 export default function Navbars() {
   return (
@@ -14,11 +14,17 @@ export default function Navbars() {
         </div>
         <div className="col">
           <a className="navbar-brand" href="#">
-            <Image src={logoMedfor} width={1920} height={1920} className={`${styles.imageLogoMedfor}`} alt="..." />
+            <Image
+              src={logoMedfor}
+              width={1920}
+              height={1920}
+              className={`${styles.imageLogoMedfor}`}
+              alt="logomedfor"
+              priority={true}
+            />
           </a>
         </div>
       </nav>
-
     </div>
-  )
+  );
 }
