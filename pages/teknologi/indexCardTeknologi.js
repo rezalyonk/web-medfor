@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./indexCardTeknologi.module.css";
 import { fetchDataAllPost } from "@/pages/api/ghostConfig";
 
-export default function indexCardTeknologi() {
+export default function IndexCardTeknologi() {
   const [posts, setPosts] = useState([]);
   // const [tags, setTags] = useState([]);
 
