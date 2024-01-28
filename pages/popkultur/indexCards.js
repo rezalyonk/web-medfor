@@ -3,7 +3,7 @@ import Image from "next/image";
 import styles from "./indexCardPopKultur.module.css";
 import { fetchDataAllPost } from "@/pages/api/ghostConfig";
 
-export default function indexCards() {
+export default function IndexCards() {
   const [posts, setPosts] = useState([]);
   // const [tags, setTags] = useState([]);
 
