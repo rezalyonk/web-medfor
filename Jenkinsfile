@@ -28,7 +28,7 @@ pipeline {
             steps {
                 script {
                     // Pushing to the GitLab repository using GitLab credentials
-                    withCredentials([usernamePassword(credentialsId: 'jenkins-rezalyonk', passwordVariable: 'GITLAB_PASSWORD', usernameVariable: 'GITLAB_USERNAME')]) {
+                    withCredentials([usernamePassword(credentialsId: 'rezalyonk', passwordVariable: 'GITLAB_PASSWORD', usernameVariable: 'GITLAB_USERNAME')]) {
                         sh "git push https://${GITLAB_USERNAME}:${GITLAB_PASSWORD}@gitlab.com/rezalyonk/web-medfor.git HEAD:main"
                     }
                 }
