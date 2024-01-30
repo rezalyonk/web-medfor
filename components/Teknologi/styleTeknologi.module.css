@@ -1,11 +1,11 @@
-.containerDisplay{
+.containerDisplay {
     /* background-color: skyblue; */
     border: solid;
     border-radius: 16px;
     margin-top: 2%;
 }
 
-.imageiconTeknologi{
+.imageiconTeknologi {
     /* background-color: green; */
     width: 5.5vh;
     height: auto;
@@ -14,14 +14,14 @@
     margin-bottom: 2pt;
 }
 
-.iniH1{
+.iniH1 {
     /* background-color: red; */
     font-weight: bold;
     font-size: 20pt;
     margin-top: 12pt;
 }
 
-.iniH1copy{
+.iniH1copy {
     /* background-color: green; */
     font-weight: bold;
     font-size: 20pt;
