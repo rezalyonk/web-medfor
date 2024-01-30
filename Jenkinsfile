@@ -9,7 +9,7 @@ pipeline {
         stage('Pull from GitHub') {
             steps {
                 script {
-                    // Cloning the GitHub repository
+                    // Clone the GitHub repository
                     checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
                 }
             }
@@ -18,7 +18,7 @@ pipeline {
         stage('Testing') {
             steps {
                 script {
-                    // Running 'npm install' for testing
+                    // Run 'npm install' for testing
                     sh 'npm install'
                 }
             }
@@ -27,8 +27,8 @@ pipeline {
         stage('Push to GitLab') {
             steps {
                 script {
-                    // Pushing to the GitLab repository using GitLab credentials
-                    withCredentials([usernamePassword(credentialsId: 'rezalyonk', passwordVariable: 'USERNAME', usernameVariable: 'PASSWORD')]) {
+                    // Push to the GitLab repository using GitLab credentials
+                    withCredentials([usernamePassword(credentialsId: 'rezalyonk', passwordVariable: 'PASSWORD', usernameVariable: 'USERNAME')]) {
                         sh "git push https://$USERNAME:$PASSWORD@gitlab.com/rezalyonk/web-medfor.git HEAD:main"
                     }
                 }
