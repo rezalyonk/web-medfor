@@ -30,4 +30,11 @@ pipeline {
             }
         }
     }
+
+    post {
+        fixed{
+            echo 'whatever the conditions, build, test, deploy,'
+            echo 'I dont care success or error '
+        }
+    }
 }
