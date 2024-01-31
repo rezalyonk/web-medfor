@@ -18,12 +18,7 @@ pipeline {
         stage('Testing') {
             steps {
                 script {
-                    // Navigate to the cloned repository directory
-                    dir('web-medfor') {
-                        // Run 'npm install' for testing
-                        sh 'npm install'
-                        // Add other testing commands if needed
-                    }
+                    sh 'npm install'
                 }
             }
         }
