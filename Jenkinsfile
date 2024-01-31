@@ -7,13 +7,14 @@ pipeline {
 
     stages {
         stage('Pull from GitHub') {
-            steps {
-                script {
-                    // Cloning the GitHub repository
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
-                }
-            }
+    steps {
+        script {
+            // Cloning the GitHub repository
+            checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
         }
+    }
+}
+
         
         stage('Testing') {
             steps {
