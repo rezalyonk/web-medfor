@@ -45,7 +45,7 @@ pipeline {
                     }
 
                     // Clean untracked files
-                    sh 'git clean -xdf'
+                    sh 'git clean -dfX'
 
                     // Set GitLab remote URL
                     sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
@@ -59,6 +59,7 @@ pipeline {
         }
     }
 }
+
 
     }
 }
