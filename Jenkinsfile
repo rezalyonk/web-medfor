@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    tools {
+tools {
         nodejs '21.6.1'
     }
 
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Cloning the GitHub repository
-                    checkout([$class: 'GitSCM', branches: [[name: 'main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
                 }
             }
         }
@@ -42,6 +42,9 @@ pipeline {
                             } else {
                                 sh 'git checkout main'
                             }
+
+                            // Clean untracked files
+                            sh 'git clean -dfX'
 
                             // Set GitLab remote URL
                             sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
