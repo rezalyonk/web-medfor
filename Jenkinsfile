@@ -32,8 +32,15 @@ pipeline {
     }
 
     post {
+        always{
+            echo 'whatever the conditions, it will always be done'
+        }
+
         fixed{
-            echo 'whatever the conditions, build, test, deploy,'
+            echo 'whatever the conditions, build, test, deploy. I dont care success or error'
+        }
+
+        cleanup{
             echo 'I dont care success or error '
         }
     }
