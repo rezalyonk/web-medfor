@@ -1,6 +1,10 @@
 pipeline {
     agent any
     
+    tools{
+        nodejs '21.6.1'
+    }
+
     stages {
         stage('Pull from GitHub') {
             steps {
@@ -18,19 +22,25 @@ pipeline {
                     dir('web-medfor') {
                         // Run 'npm install' for testing
                         sh 'npm install'
+                        // Add other testing commands if needed
                     }
                 }
             }
         }
         
-        stage('Push to GitHub') {
+        stage('Push to GitLab') {
             steps {
                 script {
-                    // Commit and push changes to the new repository
-                    git 'https://github.com/rezalyonk/testing-deploy.git'
-                    sh 'git add .'
-                    sh 'git commit -m "Testing deploy"'
-                    sh 'git push origin master'
+                    // Commit and push changes to the GitLab repository
+                    dir('web-medfor') {
+                        // Configure GitLab credentials
+                        withCredentials([usernamePassword(credentialsId: 'rlyonk', usernameVariable: 'GITLAB_USERNAME', passwordVariable: 'GITLAB_PASSWORD')]) {
+                            sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
+                            sh 'git add .'
+                            sh 'git commit -m "Testing deploy"'
+                            sh 'git push origin master'
+                        }
+                    }
                 }
             }
         }
