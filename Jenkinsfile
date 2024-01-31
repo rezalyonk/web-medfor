@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-tools {
+    tools {
         nodejs '21.6.1'
     }
 
