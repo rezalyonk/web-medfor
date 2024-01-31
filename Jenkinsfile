@@ -29,20 +29,22 @@ pipeline {
         }
         
         stage('Push to GitLab') {
-            steps {
-                script {
-                    // Commit and push changes to the GitLab repository
-                    dir('web-medfor') {
-                        // Configure GitLab credentials
-                        withCredentials([usernamePassword(credentialsId: 'rlyonk', usernameVariable: 'GITLAB_USERNAME', passwordVariable: 'GITLAB_PASSWORD')]) {
-                            sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
-                            sh 'git add .'
-                            sh 'git commit -m "Testing deploy"'
-                            sh 'git push origin main' // Ganti 'main' dengan branch yang diinginkan
-                        }
-                    }
+    steps {
+        script {
+            // Commit and push changes to the GitLab repository
+            dir('web-medfor') {
+                // Configure GitLab credentials
+                withCredentials([usernamePassword(credentialsId: 'rlyonk', usernameVariable: 'GITLAB_USERNAME', passwordVariable: 'GITLAB_PASSWORD')]) {
+                    sh 'git checkout -b feature-branch' // Ganti 'feature-branch' dengan nama branch yang diinginkan
+                    sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
+                    sh 'git add .'
+                    sh 'git commit -m "Testing deploy"'
+                    sh 'git push origin feature-branch' // Ganti 'feature-branch' dengan nama branch yang diinginkan
                 }
             }
         }
+    }
+}
+
     }
 }
