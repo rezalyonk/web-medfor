@@ -6,11 +6,10 @@ pipeline {
     }
 
     stages {
-        stage('Pull from GitHub') {
+        stage('Build') {
             steps {
-                script {
-                    // Cloning the GitHub repository
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], userRemoteConfigs: [[url: 'https://github.com/rezalyonk/web-medfor.git']]])
+                script{
+                    sh 'npm install'
                 }
             }
         }
@@ -23,33 +22,10 @@ pipeline {
             }
         }
 
-        stage('Push to GitLab') {
+        stage('Deploy') {
             steps {
                 script {
-                    // Commit and push changes to the GitLab repository
-                    dir('web-medfor') {
-                        // Configure GitLab credentials
-                        withCredentials([usernamePassword(credentialsId: 'rlyonk', usernameVariable: 'GITLAB_USERNAME', passwordVariable: 'GITLAB_PASSWORD')]) {
-                            // Check if 'main' branch already exists, if not create it
-                            def branchExists = sh(script: "git show-ref --verify --quiet refs/heads/main", returnStatus: true) == 0
-                            if (!branchExists) {
-                                sh 'git checkout -b main'
-                            } else {
-                                sh 'git checkout main'
-                            }
-
-                            // Clean untracked files
-                            sh 'git clean -dfX'
-
-                            // Set GitLab remote URL
-                            sh "git remote set-url origin https://$GITLAB_USERNAME:$GITLAB_PASSWORD@gitlab.com/rlyonk/web-medfor.git"
-                            
-                            // Add, commit, and push changes
-                            sh 'git add .'
-                            sh 'git commit -m "Testing deploy"'
-                            sh 'git push origin main'
-                        }
-                    }
+                    echo 'Telah Terdeploy Sampai Tujuan'
                 }
             }
         }
