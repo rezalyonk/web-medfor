@@ -1,7 +1,7 @@
 pipeline {
     agent any
     
-    tools{
+    tools {
         nodejs '21.6.1'
     }
 
@@ -10,7 +10,7 @@ pipeline {
             steps {
                 script {
                     // Clone the repository from GitHub
-                    git 'https://github.com/rezalyonk/web-medfor.git'
+                    git credentialsId: 'github-gitlab-rezalyonk', url: 'https://github.com/rezalyonk/web-medfor.git'
                 }
             }
         }
